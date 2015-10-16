@@ -1,0 +1,304 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>Form Elements Pattern Demo</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="../dist/formelements.css">
+    <link rel="stylesheet" href="http://cdnjs.cloudflare.com/ajax/libs/highlight.js/8.7/styles/default.min.css">
+    <style>
+        main { max-width:800px; margin: 20px auto;}
+        .show-code { margin: 10px 0;}
+        .all-controls label { display:inline-block; width: 8em;}
+        .all-controls .field { margin: 0.5em 0;}
+    </style>
+</head>
+<body>
+    <main>
+        <h2>Clean Form Elements</h2>
+        
+        <p>The Clean Form Elements module provides a consistent style for form controls, without requiring classes to be added to the form elements.</p>
+
+        <p>By default, controls retain their natural size and inline nature.</p>
+        <section class="demo">            
+<label>Label</label>
+<input type="text" placeholder="text input "/>
+<select>
+    <option>Option 1</option>
+    <option>Option 2</option>
+    <option>Option 3</option>
+</select>
+<input type="submit" value="Submit" />
+        </section>
+        
+        <p>By default, there is no padding or space between inputs unless there is whitespace in the HTML:</p>
+        <section class="demo">            
+<input type="text" /><input type="text" /> <input type="text" />
+        </section>
+        
+        <h3>Simple Aligned forms</h3>
+        <p>If you want to group a label and a form control, wrap them in an element with the class <code>field</code>.
+        If your wrapping element is a block-level element, your label and control will be grouped, and a small 
+        margin is added to separate fields from each other.</p>
+        <section class="demo">
+<div class="field">
+    <label>Label</label>
+    <input type="text">
+</div>
+<div class="field">
+    <label>Label Two</label>
+    <input type="text">
+</div>
+<div class="field">
+    <label>Label Three</label>
+    <input type="text">
+</div>
+        </section>
+        
+        
+        <p>For aligned forms, just give labels a fixed width.</p>
+        <section id="demo-1" class="demo">
+<form class="survey">
+    <div class="field">
+        <label>Label Three</label>
+        <input type="text">
+    </div>
+    <div class="field">
+        <label>Label Four</label>
+        <input type="text">
+    </div>
+</form>
+<style>
+    #demo-1 .survey label {
+        display: inline-block;
+        text-align: right;
+        width: 10em;
+        padding-right:0.5em;
+    }
+</style>
+        </section>
+
+
+        <h3>Simple Stacked Forms</h3>
+        <p>For stacked forms, just style labels as block elements and add appropriate margins.</p>
+        <section id="demo-2" class="demo">
+<form class="survey">
+    <div class="field">
+        <label>Label Three</label>
+        <input type="text">
+    </div>
+    <div class="field">
+        <label>Label Four</label>
+        <input type="text">
+    </div>
+</form>
+<style>
+    #demo-2 .survey label {
+        display: block;
+        margin: .6em 0 .2em;
+    }
+</style>
+        </section>
+        
+<h3>All controls</h3>
+        <section class="demo all-controls">
+        
+<div class="field">
+    <label>Unmarked Input</label>       
+    <input />
+</div>
+<div class="field">
+    <label>Text</label>
+    <input type="text" />
+</div>
+<div class="field">
+    <label>Select</label>
+    <select>
+        <option>Option 1</option>
+        <option>Option 2</option>
+        <option>Option 3</option>
+        <option>Option 4</option>
+        <option>Option 5</option>
+        <option>Option 6</option>
+    </select>
+</div>
+<div class="field">
+    <label>Select with wide values</label>
+    <select>
+        <option>Option 1 with a really long label here that can extend the width of the select list</option>
+        <option>Option 2</option>
+        <option>Option 3</option>
+        <option>Option 4</option>
+        <option>Option 5</option>
+        <option>Option 6</option>
+    </select>
+</div>
+<div class="field">
+    <label>Select Multiple</label>
+    <select multiple>
+        <option>Option 1</option>
+        <option>Option 2</option>
+        <option>Option 3</option>
+        <option>Option 4</option>
+        <option>Option 5</option>
+        <option>Option 6</option>
+    </select>
+</div>
+<div class="field">
+    <label>Color</label>
+    <input type="color" />
+</div>
+<div class="field">
+    <label>Date</label>
+    <input type="date" />
+</div>
+<div class="field">
+    <label>Local Datetime</label>
+    <input type="datetime-local" />
+</div>
+<div class="field">
+    <label>Email</label>
+    <input type="email" />
+</div>
+<div class="field">
+    <label>Month</label>
+    <input type="month" />
+</div>
+<div class="field">
+    <label>Number</label>
+    <input type="number" />
+</div>
+<div class="field">
+    <label>Password</label>
+    <input type="password" />
+</div>
+<div class="field">
+    <label>Range</label>
+    <input type="range" min="0" max="25" value="5" />
+</div>
+<div class="field">
+    <label>Search</label>
+    <input type="search" />
+</div>
+<div class="field">
+    <label>Tel</label>
+    <input type="tel" />
+</div>
+<div class="field">
+    <label>URL</label>
+    <input type="url" />
+</div>
+<div class="field">
+    <label>Week</label>
+    <input type="week" />
+</div>
+<div class="field">
+    <label>Submit</label>
+    <input type="submit" />
+</div>
+<div class="field">
+    <label>Checkbox</label>
+    <input type="checkbox">
+</div>
+<div class="field">
+    <label>Radio Buttons</label>
+    <input type="radio" name="sex" value="male">Male
+    <input type="radio" name="sex" value="female">Female
+</div>
+<div class="field">
+    <label>Textarea</label>
+    <textarea></textarea>
+</div>
+<div class="field">
+    <label>File input</label>
+    <input type="file">
+</div>
+<div class="field">
+    <label>Button</label>
+    <input type="button" value="Value" />
+</div>
+<div class="field">
+    <label>Reset</label>
+    <input type="reset" />
+</div>
+
+    <fieldset>
+        <legend>Legend</legend>
+        <div class="field">
+            <label>Text</label>
+            <input type="text" />
+        </div>
+        <div class="field">
+            <label>Date</label>
+            <input type="date" />
+        </div>
+    </fieldset>
+
+<div class="field">
+    <label>Optgroup</label>
+    <select>
+      <optgroup label="Group 1">
+        <option>Option 1.1</option>
+      </optgroup> 
+      <optgroup label="Group 2">
+        <option>Option 2.1</option>
+        <option>Option 2.2</option>
+      </optgroup>
+      <optgroup label="Group 3" disabled>
+        <option>Option 3.1</option>
+        <option>Option 3.2</option>
+        <option>Option 3.3</option>
+      </optgroup>
+    </select>
+</div>
+<div class="field">
+    <label>Required attribute</label>
+    <input type="text" required />
+</div>
+
+<div class="field">
+    <label>Multiple Fields</label>
+    <input type="text" />
+    <input type="text" />
+</div>
+<div class="field">
+    <label>Multiple Buttons</label>
+    <input type="submit" value="Go" />
+    <input type="reset"  value="Clear" />
+</div>
+
+        </section>
+        
+        
+        
+        
+        
+        
+        
+    </main>
+    <!-- scripts here -->
+    <script src="http://code.jquery.com/jquery-2.1.4.min.js"></script>
+    <script src="http://cdnjs.cloudflare.com/ajax/libs/highlight.js/8.7/highlight.min.js"></script>
+    <script>
+    function escapeHtml(str) {
+        var div = document.createElement('div');
+        div.appendChild(document.createTextNode(str));
+        return div.innerHTML;
+    };
+    $(document).ready(function() {
+      $('.demo').each(function(i, block) {
+        $(block).after('<button class="show-code">Show Code</button>');
+      });
+      $('.show-code').on('click', function(e) {
+        var $demo = $(this).prev();
+        var encodedSource = document.createTextNode($demo.html());
+        var pre = document.createElement('pre');
+        pre.appendChild(encodedSource);
+        hljs.highlightBlock(pre);
+        $(this).replaceWith(pre);
+      });
+    });
+    </script>    
+</body>
+</html>
