@@ -106,7 +106,7 @@ input[type="checkbox"] {
 }
 
 select {
-    background-color: white;
+  background-color: white;
 }
 
 input[type="search"]::-webkit-search-decoration {
@@ -197,15 +197,15 @@ input[type="tel"]:focus,
 input[type="color"]:focus,
 select:focus,
 textarea:focus {
-    outline: 0;
-    border-color: #129FEA; /* blue border */
+  outline: 0;
+  border-color: #129FEA; /* blue border */
 }
 
 /* focus for controls that don't have a natural border */
 input[type="radio"]:focus,
 input[type="checkbox"]:focus {
   box-shadow: none;
-  outline: 1px auto #129FEA;
+  outline: 1px auto #129FEA; /* blue outline */
 }
 
 /* pressed button appearance */
@@ -224,14 +224,14 @@ input[type="button"]:active {
 input:focus:invalid,
 textarea:focus:invalid,
 select:focus:invalid {
-    color: #b94a48;
-    border-color: #ee5f5b;
-    box-shadow: none;
+  color: #b94a48;
+  border-color: #ee5f5b;
+  box-shadow: none;
 }
 
 input[type="radio"]:focus:invalid,
 input[type="checkbox"]:focus:invalid {
-    outline-color: #e9322d;
+  outline-color: #e9322d;
 }
 
 
@@ -287,17 +287,17 @@ optgroup::-moz-focus-inner {
 }
 
 fieldset {
-    margin: 0.5em 0;
-    padding: 0.5em 0;
-    border: 1px solid #ddd;
-	border-left:0;
-	border-right:0;
+  margin: 0.5em 0;
+  padding: 0.5em 0;
+  border: 1px solid #ddd;
+  border-left:0;
+  border-right:0;
 }
 
 legend {
-    display: block;
-    width: 100%;
-    padding: 0 0 0.3em;
-    margin:0;
-    border-bottom: 1px solid #ddd;
+  display: block;
+  width: 100%;
+  padding: 0 0 0.3em;
+  margin:0;
+  border-bottom: 1px solid #ddd;
 }
