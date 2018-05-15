@@ -34,8 +34,6 @@ textarea,
 select,
 button,
 a.button {
-  -webkit-box-sizing: border-box;
-  -moz-box-sizing: border-box;
   box-sizing: border-box;
   background-clip: padding-box;
   outline: 0;
@@ -122,7 +120,6 @@ input[type="reset"],
 input[type="submit"],
 input[type="button"] {
   -webkit-appearance: none;
-  background: #dddddd url('data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABkAAAAZCAAAAADhgtq/AAAAHElEQVQoz2P8z4ADsOCW+UeGnsFs2nDzz5AMHQA+JRlAyyOraAAAAABJRU5ErkJggg==') repeat-x; /* For IE8&9 */
   background-image: linear-gradient(#ffffff, #dddddd);
   color: #333333;
   border-color: #dddddd #bbbbbb #999999;
@@ -246,9 +243,6 @@ select[disabled] option,
 select[disabled] optgroup,
 textarea[disabled] {
   box-shadow: none;
-  -moz-user-select: -moz-none;
-  -webkit-user-select: none;
-  -khtml-user-select: none;
   user-select: none;
   color: #888888;
   cursor: default;
