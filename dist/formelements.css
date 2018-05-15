@@ -208,7 +208,7 @@ textarea:focus {
 input[type="radio"]:focus,
 input[type="checkbox"]:focus {
   box-shadow: none;
-  outline: 1px auto #29FEA;
+  outline: 1px auto #129FEA;
 }
 
 /* pressed button appearance */
